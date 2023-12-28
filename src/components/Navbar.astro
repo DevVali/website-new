@@ -14,23 +14,23 @@ const navPages = [
 ---
 
 <div
-	class="mx-3 my-6 max-w-7xl rounded-full border-2 border-secondary bg-transparent px-2 sm:px-6 lg:px-8 xl:mx-auto"
+	class="mx-3 my-6 max-w-7xl rounded-full border-2 border-secondary bg-transparent px-2 text-text sm:px-6 lg:px-8 xl:mx-auto"
 >
 	<div class="m-0 flex justify-between overflow-hidden p-4">
-		<a href="/" class="text-2xl font-bold text-text">ejvali</a>
+		<a href="/" class="text-2xl font-bold">ejvali</a>
 		<div class="hidden md:flex md:flex-row">
 			{
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="px-5 text-lg transition-all duration-300 hover:-translate-y-0.5 hover:opacity-60"
+						class="px-5 text-xl transition-all duration-300 hover:-translate-y-0.5 hover:opacity-60"
 					>
 						{page.title}
 					</a>
 				))
 			}
 		</div>
-		<Icon name="mdi:hamburger-menu" size={30} class="hamburger cursor-pointer md:hidden" />
+		<Icon name="mdi:hamburger-menu" size={32} class="hamburger cursor-pointer md:hidden" />
 	</div>
 </div>
 
@@ -43,13 +43,13 @@ const navPages = [
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="py-2 text-lg transition-all duration-300 first:pt-0 hover:-translate-y-0.5 hover:opacity-60"
+						class="py-2 text-xl transition-all duration-300 first:pt-0 hover:-translate-y-0.5 hover:opacity-60"
 					>
 						{page.title}
 					</a>
 				))
 			}
 		</div>
-		<Icon name="mdi:close" size={30} class="hamburger-close cursor-pointer" />
+		<Icon name="mdi:close" size={32} class="hamburger-close cursor-pointer" />
 	</div>
 </div>
