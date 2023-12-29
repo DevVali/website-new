@@ -14,16 +14,20 @@ const navPages = [
 ---
 
 <div
-	class="mx-3 my-6 max-w-7xl rounded-full border-2 border-secondary bg-transparent px-2 text-text sm:px-6 lg:px-8 xl:mx-auto"
+	class="mx-3 my-6 max-w-7xl rounded-full bg-stone-900 px-2 py-1 text-text sm:px-6 lg:px-8 xl:mx-auto"
 >
 	<div class="m-0 flex justify-between overflow-hidden p-4">
-		<a href="/" class="text-2xl font-bold">ejvali</a>
+		<a
+			href="/"
+			class="text-2xl font-bold hover:underline hover:decoration-accent hover:decoration-[3px] hover:underline-offset-8"
+			>ejvali</a
+		>
 		<div class="hidden md:flex md:flex-row">
 			{
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="px-5 text-xl transition-all duration-300 hover:-translate-y-0.5 hover:opacity-60"
+						class="px-5 text-xl transition-all duration-300 first:pl-0 last:pr-0 hover:-translate-y-0.5 hover:opacity-60"
 					>
 						{page.title}
 					</a>
@@ -43,7 +47,7 @@ const navPages = [
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="py-2 text-xl transition-all duration-300 first:pt-0 hover:-translate-y-0.5 hover:opacity-60"
+						class="py-2 text-xl transition-all duration-300 first:pt-0 last:pb-0 hover:-translate-y-0.5 hover:opacity-60"
 					>
 						{page.title}
 					</a>
