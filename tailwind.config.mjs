@@ -10,6 +10,16 @@ export default {
 				secondary: "#293c25",
 				accent: "#e8e9dd",
 			},
+			keyframes: {
+				fadein: {
+					"0%": { opacity: 0 },
+					"100%": { opacity: 100 },
+				},
+			},
+			animation: {
+				content: "fadein 2s 0.5s forwards",
+				scroll: "fadein 2s 2s forwards",
+			},
 		},
 	},
 	plugins: [],
