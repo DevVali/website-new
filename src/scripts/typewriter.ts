@@ -5,7 +5,7 @@ export default function typewriter(
 	let index = 0;
 	let inTag = false;
 
-	const i = () => {
+	const interval = () => {
 		if (properties.text[index] === "<") {
 			inTag = true;
 		}
@@ -18,14 +18,14 @@ export default function typewriter(
 			index++;
 
 			if (index >= properties.text.length) {
-				clearInterval(iId);
+				clearInterval(intervalId);
 				if (properties.onFinish === undefined) return;
 				properties.onFinish();
 			}
 		} else {
 			index++;
-			i();
+			interval();
 		}
 	};
-	let iId = setInterval(i, properties.speed);
+	let intervalId = setInterval(interval, properties.speed);
 }
