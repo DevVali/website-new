@@ -1,16 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-
-const navPages = [
-	{
-		url: "",
-		title: "Home",
-	},
-	{
-		url: "about",
-		title: "About",
-	},
-];
+import { pages } from "../config.ts";
 ---
 
 <div
@@ -24,7 +14,7 @@ const navPages = [
 		>
 		<div class="hidden md:flex md:flex-row">
 			{
-				navPages.map((page) => (
+				pages.map((page) => (
 					<a
 						href={`/${page.url}`}
 						class="px-5 text-xl transition-all duration-300 first:pl-0 last:pr-0 hover:-translate-y-0.5 hover:opacity-60"
@@ -44,7 +34,7 @@ const navPages = [
 	<div class="m-0 flex justify-between overflow-hidden p-4">
 		<div class="flex flex-col">
 			{
-				navPages.map((page) => (
+				pages.map((page) => (
 					<a
 						href={`/${page.url}`}
 						class="py-2 text-xl transition-all duration-300 first:pt-0 last:pb-0 hover:-translate-y-0.5 hover:opacity-60"

@@ -14,6 +14,12 @@ dependencies:
   '@iconify-json/icomoon-free':
     specifier: ^1.1.8
     version: 1.1.8
+  '@iconify-json/icon-park':
+    specifier: ^1.1.13
+    version: 1.1.13
+  '@iconify-json/logos':
+    specifier: ^1.1.42
+    version: 1.1.42
   '@iconify-json/mdi':
     specifier: ^1.1.63
     version: 1.1.63
@@ -641,6 +647,18 @@ packages:
 
   /@iconify-json/icomoon-free@1.1.8:
     resolution: {integrity: sha512-gOHUmCvadswFYN2ieuZZH3QeU2dr0ux+dAWTqtAUtRJhlUxZfgOBMyvqOZsMMj1EpIOf+fLY1qLRCjwlTlB4WA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/icon-park@1.1.13:
+    resolution: {integrity: sha512-7AoB802JUeMwaJBRz1a+3PGfifxDiMiE+mVgbDPZLHgLaLq7WXslQCV0aDs8kQHF0SGIBUp7f8kKTHGUktuFtw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/logos@1.1.42:
+    resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

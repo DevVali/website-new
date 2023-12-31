@@ -17,8 +17,10 @@ export default {
 				},
 			},
 			animation: {
-				content: "fadein 2s 0.5s forwards",
-				scroll: "fadein 2s 2s forwards",
+				fadein: "fadein 2s forwards",
+			},
+			dropShadow: {
+				green: ["0 45px 35px rgba(145, 197, 135, 0.5)"],
 			},
 		},
 	},
