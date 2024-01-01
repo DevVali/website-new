@@ -1,17 +1,34 @@
 ---
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 
 const title = "About Me";
 ---
 
 <Layout title={title}>
 	<section class="text-3xl text-text">
-		<p>
+		<p class="mb-4">
 			Hello stranger! <Icon
 				name="fluent-emoji-flat:waving-hand-light"
-				class="animate-waving-hand inline"
-			/>
+				class="inline animate-waving-hand"
+			/>, my name is <span class="text-primary">ejvali</span>, alias <span
+				class="text-primary">Vali</span
+			> or <span class="text-primary">DevVali</span>, and I'm a software engineer passionate
+			about web development and open source. Moving in the area of web development from a
+			young age, I continued to develop my skills and never stopped learning new things, which
+			resulted in accidentally learning the technologies needed to build modern and performant
+			websites.
+		</p>
+
+		<p class="mb-4">
+			I've crafted various projects, and you can find most of them on <Link
+				href="https://github.com/DevVali"
+			>
+				my GitHub profile
+			</Link>
+			or in the <Link href="/projects">Projects</Link> page on this website. Besides being a developer,
+			I'm also a music enjoyer.
 		</p>
 	</section>
 </Layout>
