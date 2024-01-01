@@ -11,6 +11,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.4
     version: 5.0.4(astro@4.0.7)(tailwindcss@3.4.0)
+  '@iconify-json/fluent-emoji-flat':
+    specifier: ^1.1.16
+    version: 1.1.16
   '@iconify-json/icomoon-free':
     specifier: ^1.1.8
     version: 1.1.8
@@ -644,6 +647,12 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@iconify-json/fluent-emoji-flat@1.1.16:
+    resolution: {integrity: sha512-rfag8s2Ippaos57BC8huT6cVc0oWkvYaLDl0lokVX2EsS7VakKEvUlJ20CqaKiPTuaccWRthlCbjEq8XfLHDHw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify-json/icomoon-free@1.1.8:
     resolution: {integrity: sha512-gOHUmCvadswFYN2ieuZZH3QeU2dr0ux+dAWTqtAUtRJhlUxZfgOBMyvqOZsMMj1EpIOf+fLY1qLRCjwlTlB4WA==}

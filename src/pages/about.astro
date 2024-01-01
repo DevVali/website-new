@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+
+const title = "About Me";
+---
+
+<Layout title={title}>
+	<section class="text-3xl text-text">
+		<p>
+			Hello stranger! <Icon
+				name="fluent-emoji-flat:waving-hand-light"
+				class="animate-waving-hand inline"
+			/>
+		</p>
+	</section>
+</Layout>
