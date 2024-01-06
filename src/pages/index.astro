@@ -1,62 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import { socials } from "../config.ts";
-import Layout from "../layouts/Layout.astro";
-import Link from "../components/Link.astro";
 
-const title = "Homepage";
 ---
 
-<Layout title={title} indexLayout>
-	<div class="flex items-center justify-center">
-		<Image src="/public/logo.png" alt="logo by Emi" width="200" height="200" />
-	</div>
-
-	<section class="text-center md:text-left">
-		<div class="flex flex-col">
-			<h1 class="text-6xl font-extrabold drop-shadow-green"></h1>
-			<div class="content-wrapper opacity-0 [animation-delay:0.5s]">
-				<h2 class="mt-2 text-2xl text-accent">
-					<!-- prettier-ignore -->
-					Full-Stack Web Developer from <Link href="https://en.wikipedia.org/wiki/Slovakia">Slovakia</Link>
-				</h2>
-
-				<div class="my-5 flex justify-center space-x-5 md:justify-start">
-					{
-						socials.map((social) => (
-							<a href={social.link} title={social.name}>
-								<Icon
-									name={social.icon}
-									size={40}
-									class={`fill-accent transition-all duration-300 hover:-translate-y-1`}
-								/>
-							</a>
-						))
-					}
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<a href="/" class="scroll-wrapper absolute bottom-10 opacity-0 [animation-delay:2s]"
-		><Icon
-			name="icomoon-free:circle-down"
-			size={40}
-			class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
-		/></a
-	>
-</Layout>
-
-<script>
-	import typewriter from "../scripts/typewriter.ts";
-
-	typewriter("h1", {
-		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
-		speed: 70,
-		onFinish: () => {
-			document.querySelector(".content-wrapper")!.classList.add("animate-fadein");
-			document.querySelector(".scroll-wrapper")!.classList.add("animate-fadein");
-		},
-	});
-</script>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
