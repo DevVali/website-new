@@ -1,5 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout><h1 class="text-6xl font-extrabold">ejvali</h1></Layout>
+<Layout>
+	<header class="flex h-screen items-center justify-center">
+		<nav class="absolute top-0 w-full">
+			<Navbar />
+		</nav>
+		<h1 class="text-6xl font-extrabold">ejvali</h1>
+	</header>
+</Layout>
