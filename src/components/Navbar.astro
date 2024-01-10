@@ -1,10 +1,29 @@
 ---
+import { Icon } from "astro-icon/components";
 
+const navPages = [
+	{
+		url: "",
+		title: "Home",
+	},
+	{
+		url: "about",
+		title: "About",
+	},
+];
 ---
 
-<div class="mx-3 my-6 max-w-7xl rounded-full bg-stone-900 px-2 py-1 sm:px-6 lg:px-8 xl:mx-auto">
+<div
+	class="mx-3 my-6 max-w-7xl rounded-full bg-stone-900 px-2 py-1 text-text sm:px-6 lg:px-8 xl:mx-auto"
+>
 	<div class="m-0 flex justify-between overflow-hidden p-4">
-		<a href="#">Right</a>
-		<a href="#">Left</a>
+		<a href="/" class="text-2xl font-bold">ejvali</a>
+		<div class="hidden md:flex md:flex-row md:space-x-4">
+			{
+				/* prettier-ignore */
+				navPages.map((page) => (<a href={`/${page.url}`} class="px-3 text-xl transition-all duration-300 rounded-md hover:bg-stone-800">{page.title}</a>))
+			}
+		</div>
+		<Icon name="mdi:hamburger-menu" size={32} class="cursor-pointer md:hidden" />
 	</div>
 </div>
