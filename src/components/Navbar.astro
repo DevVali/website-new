@@ -5,18 +5,22 @@ const navPages = [
 	{
 		url: "",
 		title: "Home",
+		icon: "mdi:home",
 	},
 	{
 		url: "about",
 		title: "About",
+		icon: "mdi:about",
 	},
 	{
 		url: "projects",
 		title: "Projects",
+		icon: "grommet-icons:projects",
 	},
 	{
 		url: "contact",
 		title: "Contact",
+		icon: "mdi:contact",
 	},
 ];
 ---
@@ -24,16 +28,17 @@ const navPages = [
 <div
 	class="rounded-t-3xl border border-stone-800 bg-stone-900 px-2 py-1 text-text md:mx-3 md:my-6 md:max-w-7xl md:rounded-full md:border-none md:px-6 lg:px-8 xl:mx-auto"
 >
-	<div class="m-0 flex justify-center overflow-hidden p-4 md:justify-between">
-		<a href="/" class="hidden text-xl font-bold md:inline-block">ejvali</a>
-		<div class="flex space-x-1 overflow-x-auto md:space-x-2 md:overflow-x-visible">
+	<div class="m-0 flex overflow-hidden p-4 md:justify-between">
+		<a href="/" class="hidden text-2xl font-bold md:inline-block">ejvali</a>
+		<div class="flex w-full justify-evenly md:w-auto md:justify-normal md:space-x-4">
 			{
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="rounded-md px-2 text-lg transition-all duration-300 hover:bg-stone-800 md:px-4 md:text-xl"
+						class="flex items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-stone-800"
 					>
-						{page.title}
+						<Icon name={page.icon} class="text-3xl md:mr-2 md:text-2xl" />
+						<span class="hidden text-xl md:inline-block">{page.title}</span>
 					</a>
 				))
 			}

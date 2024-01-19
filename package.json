@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@astrojs/check": "^0.3.4",
 		"@astrojs/tailwind": "^5.1.0",
+		"@iconify-json/grommet-icons": "^1.1.10",
 		"@iconify-json/mdi": "^1.1.64",
 		"astro": "^4.1.1",
 		"astro-icon": "^1.0.2",
