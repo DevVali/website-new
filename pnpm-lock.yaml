@@ -14,6 +14,9 @@ dependencies:
   '@iconify-json/grommet-icons':
     specifier: ^1.1.10
     version: 1.1.10
+  '@iconify-json/icomoon-free':
+    specifier: ^1.1.8
+    version: 1.1.8
   '@iconify-json/mdi':
     specifier: ^1.1.64
     version: 1.1.64
@@ -649,6 +652,12 @@ packages:
 
   /@iconify-json/grommet-icons@1.1.10:
     resolution: {integrity: sha512-0BZ7E0qAhrAUjduWYci/ys29vVtp5o6uNZK+7Df4bf02nO8xGi0xawn3VbqnxIq8T4fEcOMt043Zlo1mH7dnqg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/icomoon-free@1.1.8:
+    resolution: {integrity: sha512-gOHUmCvadswFYN2ieuZZH3QeU2dr0ux+dAWTqtAUtRJhlUxZfgOBMyvqOZsMMj1EpIOf+fLY1qLRCjwlTlB4WA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
