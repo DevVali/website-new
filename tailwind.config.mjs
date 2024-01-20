@@ -7,6 +7,16 @@ export default {
 				text: "#e9dddd",
 				background: "#110e0e",
 				primary: "#91c587",
+				accent: "#e8e9dd",
+			},
+			keyframes: {
+				fadein: {
+					"0%": { opacity: 0 },
+					"100%": { opacity: 100 },
+				},
+			},
+			animation: {
+				fadein: "fadein 2s forwards",
 			},
 		},
 	},
