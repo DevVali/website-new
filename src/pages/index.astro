@@ -7,14 +7,14 @@ import Navbar from "../components/Navbar.astro";
 <Layout>
 	<header class="flex h-screen flex-col items-center justify-center">
 		<nav
-			class="navbar fixed bottom-0 block w-full transition-all duration-300 md:absolute md:top-0"
+			class="fixed bottom-0 w-full md:absolute md:top-0"
 		>
 			<Navbar />
 		</nav>
 
 		<section class="space-y-5 text-center">
 			<h1 class="text-6xl font-extrabold"></h1>
-			<div class="header-content-wrapper opacity-0 [animation-delay:0.5s]">
+			<div class="content-wrapper opacity-0 [animation-delay:0.5s]">
 				<h2 class="text-xl text-accent">
 					Full-Stack Web Developer from <a
 						href="https://en.wikipedia.org/wiki/Slovakia"
@@ -35,7 +35,7 @@ import Navbar from "../components/Navbar.astro";
 		>
 	</header>
 
-	<main class="content-wrapper hidden">
+	<main class="mb-28 md:mb-auto">
 		<p>
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, ut nemo nisi
 			repellat quisquam eveniet? Totam tenetur fugiat eligendi aspernatur aliquam iste atque
@@ -50,12 +50,8 @@ import Navbar from "../components/Navbar.astro";
 		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
 		speed: 70,
 		onFinish: () => {
-			document.querySelector(".header-content-wrapper")!.classList.add("animate-fadein");
+			document.querySelector(".content-wrapper")!.classList.add("animate-fadein");
 			document.querySelector(".scroll-wrapper")!.classList.add("animate-fadein");
-			setInterval(() => {
-				document.querySelector(".content-wrapper")!.classList.remove("hidden");
-				document.querySelector(".content-wrapper")!.classList.add("block");
-			}, 2000);
 		},
 	});
 </script>
