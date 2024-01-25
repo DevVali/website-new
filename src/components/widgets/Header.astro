@@ -2,10 +2,10 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="space-y-5 text-center">
-	<h1 class="text-6xl font-extrabold"></h1>
+<section class="mx-1 space-y-5 text-center">
+	<h1 class="text-5xl font-extrabold md:text-6xl"></h1>
 	<div class="content-wrapper relative opacity-0 [animation-delay:0.5s]">
-		<h2 class="text-xl text-accent">
+		<h2 class="text-lg text-accent md:text-xl">
 			Full-Stack Web Developer from <a
 				href="https://en.wikipedia.org/wiki/Slovakia"
 				class="text-primary">Slovakia</a
@@ -14,14 +14,14 @@ import { Icon } from "astro-icon/components";
 	</div>
 </section>
 
-<a href="#about" class="absolute bottom-24 md:bottom-16"
-	><span class="scroll-wrapper relative opacity-0 [animation-delay:2s]"
-		><Icon
-			name="icomoon-free:circle-down"
-			class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
-			size={40}
-		/></span
-	></a
+<a
+	href="#about"
+	class="scroll-wrapper absolute bottom-24 opacity-0 [animation-delay:2s] md:bottom-16"
+	><Icon
+		name="icomoon-free:circle-down"
+		class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
+		size={40}
+	/></a
 >
 
 <script>
