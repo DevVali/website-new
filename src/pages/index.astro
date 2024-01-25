@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/widgets/Header.astro";
+import Navbar from "../components/atoms/Navbar.astro";
 import About from "../components/widgets/About.astro";
 ---
 
 <Layout>
 	<header class="flex h-screen flex-col items-center justify-center">
+		<nav class="fixed bottom-0 w-full md:absolute md:top-0">
+			<Navbar />
+		</nav>
 		<Header />
 	</header>
 
