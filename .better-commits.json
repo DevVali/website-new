@@ -44,6 +44,12 @@
 				"emoji": "🚨"
 			},
 			{
+				"value": "style",
+				"label": "style",
+				"hint": "Changes related to code formatting",
+				"emoji": "🧨"
+			},
+			{
 				"value": "build",
 				"label": "build",
 				"hint": "Changes that affect the build system or external dependencies",
