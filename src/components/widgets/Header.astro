@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+import Navbar from "../atoms/Navbar.astro";
+---
+
+<nav
+class="fixed bottom-0 w-full md:absolute md:top-0"
+>
+<Navbar />
+</nav>
+
+<section class="space-y-5 text-center">
+<h1 class="text-6xl font-extrabold"></h1>
+<div class="content-wrapper opacity-0 [animation-delay:0.5s]">
+    <h2 class="text-xl text-accent">
+        Full-Stack Web Developer from <a
+            href="https://en.wikipedia.org/wiki/Slovakia"
+            class="text-primary">Slovakia</a
+        >
+    </h2>
+</div>
+</section>
+
+<a
+href="#about"
+class="scroll-wrapper absolute bottom-24 opacity-0 [animation-delay:2s] md:bottom-16"
+><Icon
+    name="icomoon-free:circle-down"
+    class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
+    size={40}
+/></a
+>
+
+<script>
+	import typewriter from "../../scripts/typewriter.ts";
+	typewriter("h1", {
+		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
+		speed: 70,
+		onFinish: () => {
+			document.querySelector(".content-wrapper")!.classList.add("animate-fadein");
+			document.querySelector(".scroll-wrapper")!.classList.add("animate-fadein");
+		},
+	});
+</script>
