@@ -11,8 +11,9 @@ export default {
 			},
 			keyframes: {
 				fadein: {
-					"0%": { opacity: 0 },
-					"100%": { opacity: 100 },
+					"0%": { top: -100 },
+					"40%": { opacity: 0 },
+					"100%": { top: 0, opacity: 100 },
 				},
 			},
 			animation: {

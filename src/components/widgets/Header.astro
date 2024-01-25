@@ -9,7 +9,7 @@ import Navbar from "../atoms/Navbar.astro";
 
 <section class="space-y-5 text-center">
 	<h1 class="text-6xl font-extrabold"></h1>
-	<div class="content-wrapper opacity-0 [animation-delay:0.5s]">
+	<div class="content-wrapper relative opacity-0 [animation-delay:0.5s]">
 		<h2 class="text-xl text-accent">
 			Full-Stack Web Developer from <a
 				href="https://en.wikipedia.org/wiki/Slovakia"
@@ -19,14 +19,14 @@ import Navbar from "../atoms/Navbar.astro";
 	</div>
 </section>
 
-<a
-	href="#about"
-	class="scroll-wrapper absolute bottom-24 opacity-0 [animation-delay:2s] md:bottom-16"
-	><Icon
-		name="icomoon-free:circle-down"
-		class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
-		size={40}
-	/></a
+<a href="#about" class="absolute bottom-24 md:bottom-16"
+	><span class="scroll-wrapper relative opacity-0 [animation-delay:2s]"
+		><Icon
+			name="icomoon-free:circle-down"
+			class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
+			size={40}
+		/></span
+	></a
 >
 
 <script>
