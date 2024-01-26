@@ -4,6 +4,7 @@ dist/
 .astro/
 
 # dependencies
+.vite
 node_modules/
 
 # logs
