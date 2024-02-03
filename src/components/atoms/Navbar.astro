@@ -4,7 +4,7 @@ import { navPages } from "../../config.ts";
 ---
 
 <div
-	class="rounded-t-3xl border border-stone-800 bg-stone-900 px-2 py-1 text-text md:mx-3 md:my-6 md:max-w-7xl md:rounded-full md:border-none md:px-6 lg:px-8 xl:mx-auto"
+	class="rounded-t-3xl border border-neutral-800 bg-neutral-900 px-2 py-1 text-text md:mx-3 md:my-6 md:max-w-7xl md:rounded-full md:border-none md:px-6 lg:px-8 xl:mx-auto"
 >
 	<div class="m-0 flex overflow-hidden p-4 md:justify-between">
 		<a href="/" class="hidden text-2xl font-bold md:inline-block">ejvali</a>
@@ -13,7 +13,7 @@ import { navPages } from "../../config.ts";
 				navPages.map((page) => (
 					<a
 						href={`/${page.url}`}
-						class="flex items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-stone-800"
+						class="flex items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-neutral-800"
 					>
 						<Icon name={page.icon} class="text-3xl md:mr-2 md:text-2xl" />
 						<span class="hidden text-xl md:inline-block">{page.title}</span>

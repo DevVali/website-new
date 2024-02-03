@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				text: "#e9dddd",
-				background: "#110e0e",
+				text: "#ededed",
+				background: "#0e0e0e",
 				primary: "#91c587",
-				accent: "#e8e9dd",
+				accent: "#aaaaaa",
 			},
 			keyframes: {
 				fadein: {
