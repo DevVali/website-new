@@ -2,9 +2,9 @@
 
 ---
 
-<h2 class="text-3xl font-extrabold md:text-4xl">About Me</h2>
+<h2 class="about-heading text-3xl font-extrabold md:text-4xl">About Me</h2>
 
-<div class="space-y-6">
+<div class="about-content space-y-6">
 	<p class="text-xl md:text-2xl">
 		Hi, I'm <span class="text-primary">ejvali</span> 👋, a software engineer passionate about <span
 			class="text-primary">web development</span
@@ -23,3 +23,49 @@
 		>.
 	</p>
 </div>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	// Defaults
+	gsap.set(".about-heading", {
+		perspective: 500,
+		opacity: 0,
+		filter: "blur(5px)",
+		x: -100,
+		y: 50,
+	});
+	gsap.set(".about-content", {
+		perspective: 500,
+		opacity: 0,
+		filter: "blur(5px)",
+		x: 100,
+		y: 50,
+	});
+
+	// Timeline
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".about-heading",
+			start: "bottom center",
+			end: "+=900",
+			scrub: 3,
+			pin: "#about",
+		},
+	});
+	tl.to(".about-heading", {
+		opacity: 1,
+		filter: "blur(0px)",
+		x: 0,
+		y: 0,
+	});
+	tl.to(".about-content", {
+		opacity: 1,
+		filter: "blur(0px)",
+		x: 0,
+		y: 0,
+	});
+</script>

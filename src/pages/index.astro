@@ -7,17 +7,15 @@ import About from "../components/widgets/About.astro";
 
 <Layout>
 	<header class="flex h-screen flex-col items-center justify-center">
-		<nav
-			class="fixed bottom-0 z-20 w-full md:absolute md:bottom-auto md:top-0"
-		>
+		<nav class="fixed bottom-0 z-20 w-full md:absolute md:bottom-auto md:top-0">
 			<Navbar />
 		</nav>
 		<Header />
 	</header>
 
 	<main>
-		<div class="bg-[url('/section-bg.svg')] bg-cover bg-top py-80">
-			<section class="max-w-7xl space-y-6 px-4 md:px-10 lg:px-12 xl:mx-auto" id="about">
+		<div class="overflow-x-hidden bg-[url('/section-bg.svg')] bg-cover py-80" id="about">
+			<section class="max-w-7xl space-y-6 px-4 md:px-10 lg:px-12 xl:mx-auto">
 				<About />
 			</section>
 		</div>
