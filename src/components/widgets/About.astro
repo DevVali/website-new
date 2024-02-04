@@ -51,21 +51,16 @@
 		scrollTrigger: {
 			trigger: ".about-heading",
 			start: "bottom center",
-			end: "+=900",
-			scrub: 3,
+			end: "+=600",
+			scrub: 2,
 			pin: "#about",
 		},
+		defaults: {
+			opacity: 1,
+			filter: "blur(0px)",
+			x: 0,
+			y: 0,
+		},
 	});
-	tl.to(".about-heading", {
-		opacity: 1,
-		filter: "blur(0px)",
-		x: 0,
-		y: 0,
-	});
-	tl.to(".about-content", {
-		opacity: 1,
-		filter: "blur(0px)",
-		x: 0,
-		y: 0,
-	});
+	tl.to(".about-heading", {}).to(".about-content", {});
 </script>
