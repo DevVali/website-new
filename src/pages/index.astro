@@ -9,7 +9,6 @@ import About from "../components/widgets/About.astro";
 	<header class="flex h-screen flex-col items-center justify-center">
 		<nav
 			class="fixed bottom-0 z-20 w-full md:absolute md:bottom-auto md:top-0"
-			data-aos="fade-in"
 		>
 			<Navbar />
 		</nav>
@@ -24,9 +23,3 @@ import About from "../components/widgets/About.astro";
 		</div>
 	</main>
 </Layout>
-
-<script>
-	import AOS from "aos";
-	import "aos/dist/aos.css";
-	AOS.init();
-</script>
