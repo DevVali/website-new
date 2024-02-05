@@ -5,12 +5,7 @@ import { Icon } from "astro-icon/components";
 <section class="mx-3 space-y-6 text-center">
 	<h1 class="text-5xl font-extrabold md:text-6xl"></h1>
 	<div class="header-content opacity-0 [animation-delay:0.5s]">
-		<h3 class="text-xl text-accent md:text-2xl">
-			Full-Stack Web Developer from <a
-				href="https://en.wikipedia.org/wiki/Slovakia"
-				class="text-primary">Slovakia</a
-			>
-		</h3>
+		<h3 class="text-xl text-accent md:text-2xl">Full-Stack Web Developer</h3>
 	</div>
 </section>
 
@@ -30,7 +25,11 @@ import { Icon } from "astro-icon/components";
 	gsap.registerPlugin(ScrollToPlugin);
 
 	document.querySelector(".header-arrow")!.addEventListener("click", () => {
-		gsap.to(window, { duration: 2, scrollTo: { y: "#about", offsetY: -600 } });
+		gsap.to(window, {
+			duration: 2,
+			scrollTo: { y: "#about", offsetY: -600, autoKill: true },
+			ease: "power2",
+		});
 	});
 
 	import typewriter from "../../scripts/typewriter.ts";
