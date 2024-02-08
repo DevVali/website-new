@@ -4,10 +4,14 @@ import { navPages } from "../../config.ts";
 ---
 
 <nav
-	class="fixed bottom-0 z-20 w-full rounded-t-3xl border border-neutral-800 bg-neutral-900 px-2 py-1 text-text md:bottom-auto md:top-0 md:my-6 md:max-w-7xl md:rounded-full md:bg-transparent md:px-6 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60 lg:px-8 xl:mx-auto"
+	class="fixed bottom-0 z-20 w-full border border-neutral-800 bg-neutral-900 px-2 py-1 text-text md:bottom-auto md:top-0 md:bg-transparent md:px-6 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60 lg:px-8 xl:mx-auto"
 >
 	<div class="m-0 flex overflow-hidden p-4 md:justify-between">
-		<a href="/" class="hidden text-2xl font-bold md:inline-block">ejvali</a>
+		<a
+			href="/"
+			class="hidden items-center justify-center text-center text-2xl font-bold md:flex"
+			><img src="./logo.png" width="32" class="mr-2" /> ejvali</a
+		>
 		<div class="flex w-full justify-evenly md:w-auto md:justify-normal md:space-x-4">
 			{
 				navPages.map((page) => (
