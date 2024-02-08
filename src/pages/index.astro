@@ -11,14 +11,16 @@ import About from "../components/widgets/About.astro";
 		<Header />
 	</header>
 
-	<main>
+	<main class="mb-24 md:mb-12">
 		<div
-			class="overflow-x-hidden bg-[url('/section-bg.svg')] bg-cover bg-center py-80"
+			class="overflow-hidden bg-neutral-900"
 			id="about"
 		>
-			<section class="max-w-7xl space-y-6 px-4 md:px-10 lg:px-12 xl:mx-auto">
+		<div class="aspect-[960/300] w-full bg-no-repeat bg-center bg-cover bg-[url('/section-bg-top.svg')]"></div>
+			<section class="overflow-hidden max-w-7xl space-y-6 px-4 md:px-10 lg:px-12 xl:mx-auto py-24 md:py-12">
 				<About />
 			</section>
+			<div class="aspect-[960/300] w-full bg-no-repeat bg-center bg-cover bg-[url('/section-bg-bottom.svg')]"></div>
 		</div>
 	</main>
 </Layout>
