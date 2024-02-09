@@ -1,21 +1,21 @@
 export const navPages = [
 	{
-		url: "",
+		url: "#",
 		title: "Home",
 		icon: "mdi:home",
 	},
 	{
-		url: "about",
+		url: "#",
 		title: "About",
 		icon: "mdi:about",
 	},
 	{
-		url: "projects",
+		url: "#",
 		title: "Projects",
 		icon: "grommet-icons:projects",
 	},
 	{
-		url: "contact",
+		url: "#",
 		title: "Contact",
 		icon: "mdi:contact",
 	},
