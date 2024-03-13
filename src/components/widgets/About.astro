@@ -44,9 +44,10 @@
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: "#about",
-			start: "center bottom",
-			end: "bottom bottom",
-			toggleActions: "restart pause resume pause",
+			start: "center center",
+			end: () => `+=${document.querySelector<HTMLElement>("#about")!.offsetWidth / 2}`,
+			scrub: true,
+			pin: true,
 			markers: true,
 		},
 		defaults: {
