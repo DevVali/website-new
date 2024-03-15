@@ -19,13 +19,8 @@ import { Icon } from "astro-icon/components";
 >
 
 <script>
-	import { gsap } from "gsap";
-
-	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-	gsap.registerPlugin(ScrollToPlugin);
-
 	import typewriter from "../scripts/typewriter.ts";
+
 	typewriter("h1", {
 		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
 		speed: 50,
@@ -34,6 +29,12 @@ import { Icon } from "astro-icon/components";
 			document.querySelector(".header-arrow")!.classList.add("animate-fadein");
 		},
 	});
+
+	import { gsap } from "gsap";
+
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+	gsap.registerPlugin(ScrollToPlugin);
 
 	document.querySelectorAll<HTMLElement>(".scroll-to-home").forEach((e) => {
 		e.addEventListener("click", () => {
