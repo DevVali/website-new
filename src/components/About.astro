@@ -26,12 +26,11 @@
 
 <script>
 	import { gsap } from "gsap";
-	
+
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-	import { CustomEase } from "gsap/CustomEase";
-	
-	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
+
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 	// Defaults
 	gsap.set(".about-heading", {
@@ -43,7 +42,6 @@
 		y: 100,
 	});
 
-	// Timeline/home/user/website-new/src/components/widgets/Header.astro
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: "#about",
@@ -51,7 +49,6 @@
 			end: () => `+=${document.querySelector<HTMLElement>("#about")!.offsetWidth}`,
 			scrub: true,
 			pin: true,
-			markers: true,
 		},
 		defaults: {
 			opacity: 1,
@@ -63,10 +60,10 @@
 	document.querySelectorAll<HTMLElement>(".scroll-to-about").forEach((e) => {
 		e.addEventListener("click", () => {
 			gsap.to(window, {
-				duration: 2.5,
+				duration: 2,
 				scrollTo: tl.scrollTrigger!.end,
-				ease: CustomEase.create("custom", "M0,0 C0.321,0 0.506,0.027 0.744,0.056 1.004,0.087 0.818,1.001 1,1 "),
-			})
+				ease: "power1.in",
+			});
 		});
 	});
 </script>

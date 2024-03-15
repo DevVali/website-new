@@ -20,13 +20,12 @@ import { Icon } from "astro-icon/components";
 
 <script>
 	import { gsap } from "gsap";
-	
+
 	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-	import { CustomEase } from "gsap/CustomEase";
 
-	gsap.registerPlugin(ScrollToPlugin, CustomEase);
+	gsap.registerPlugin(ScrollToPlugin);
 
-	import typewriter from "../../scripts/typewriter.ts";
+	import typewriter from "../scripts/typewriter.ts";
 	typewriter("h1", {
 		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
 		speed: 50,
@@ -39,10 +38,10 @@ import { Icon } from "astro-icon/components";
 	document.querySelectorAll<HTMLElement>(".scroll-to-home").forEach((e) => {
 		e.addEventListener("click", () => {
 			gsap.to(window, {
-				duration: 2.5,
+				duration: 2,
 				scrollTo: 0,
-				ease: CustomEase.create("custom", "M0,0 C0.321,0 0.506,0.027 0.744,0.056 1.004,0.087 0.818,1.001 1,1 "),
-			})
+				ease: "power1.in",
+			});
 		});
 	});
 </script>
