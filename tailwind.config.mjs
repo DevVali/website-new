@@ -16,7 +16,7 @@ export default {
 				},
 			},
 			animation: {
-				fadein: "fadein 2s forwards",
+				fadein: "fadein 1.5s forwards",
 			},
 		},
 	},

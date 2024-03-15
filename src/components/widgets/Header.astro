@@ -4,16 +4,16 @@ import { Icon } from "astro-icon/components";
 
 <section class="mx-3 space-y-6 text-center">
 	<h1 class="text-5xl font-extrabold md:text-6xl"></h1>
-	<div class="header-content opacity-0 [animation-delay:0.5s]">
+	<div class="header-content opacity-0">
 		<h3 class="text-xl text-accent md:text-2xl">Full-Stack Web Developer</h3>
 	</div>
 </section>
 
 <a
-	class="header-arrow scroll-to-about absolute bottom-16 cursor-pointer opacity-0 [animation-delay:2s] md:bottom-24"
+	class="header-arrow scroll-to-about absolute bottom-16 cursor-pointer opacity-0 [animation-delay:1s] md:bottom-24"
 	><Icon
 		name="icomoon-free:circle-down"
-		class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
+		class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:4s]"
 		size={40}
 	/></a
 >
@@ -29,7 +29,7 @@ import { Icon } from "astro-icon/components";
 	import typewriter from "../../scripts/typewriter.ts";
 	typewriter("h1", {
 		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
-		speed: 70,
+		speed: 50,
 		onFinish: () => {
 			document.querySelector(".header-content")!.classList.add("animate-fadein");
 			document.querySelector(".header-arrow")!.classList.add("animate-fadein");
