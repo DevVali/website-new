@@ -29,3 +29,25 @@ import { navPages } from "../config.ts";
 		</div>
 	</div>
 </nav>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	// Defaults
+	gsap.set("nav", {
+		opacity: 0,
+	});
+
+	// Animation
+	gsap.to("nav", {
+		scrollTrigger: {
+			trigger: "nav",
+			start: "top center",
+			toggleActions: "play none none reverse",
+		},
+		opacity: 1,
+	});
+</script>
