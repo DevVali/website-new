@@ -9,6 +9,9 @@ export default {
 				primary: "#91c587",
 				accent: "#aaaaaa",
 			},
+			cursor: {
+				logo: "url(/logo-128.png), auto",
+			},
 			keyframes: {
 				fadein: {
 					"0%": { opacity: 0 },
