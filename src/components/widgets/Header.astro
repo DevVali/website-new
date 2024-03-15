@@ -9,20 +9,40 @@ import { Icon } from "astro-icon/components";
 	</div>
 </section>
 
-<p
-	class="header-scroll absolute bottom-24 cursor-default text-lg uppercase tracking-widest text-accent opacity-0 [animation-delay:2s] md:bottom-16"
+<a
+	class="header-arrow scroll-to-about absolute bottom-16 cursor-pointer opacity-0 [animation-delay:2s] md:bottom-24"
+	><Icon
+		name="icomoon-free:circle-down"
+		class="mx-auto -translate-y-1/4 animate-bounce [animation-delay:6s]"
+		size={40}
+	/></a
 >
-	Scroll down
-</p>
 
 <script>
+	import { gsap } from "gsap";
+	
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+	import { CustomEase } from "gsap/CustomEase";
+
+	gsap.registerPlugin(ScrollToPlugin, CustomEase);
+
 	import typewriter from "../../scripts/typewriter.ts";
 	typewriter("h1", {
 		text: "Hi, I'm <span class='text-primary'>ejvali</span>.",
 		speed: 70,
 		onFinish: () => {
 			document.querySelector(".header-content")!.classList.add("animate-fadein");
-			document.querySelector(".header-scroll")!.classList.add("animate-fadein");
+			document.querySelector(".header-arrow")!.classList.add("animate-fadein");
 		},
+	});
+
+	document.querySelectorAll<HTMLElement>(".scroll-to-home").forEach((e) => {
+		e.addEventListener("click", () => {
+			gsap.to(window, {
+				duration: 2.5,
+				scrollTo: 0,
+				ease: CustomEase.create("custom", "M0,0 C0.321,0 0.506,0.027 0.744,0.056 1.004,0.087 0.818,1.001 1,1 "),
+			})
+		});
 	});
 </script>

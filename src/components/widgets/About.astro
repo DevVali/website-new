@@ -26,7 +26,7 @@
 
 <script>
 	import { gsap } from "gsap";
-
+	
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 	import { CustomEase } from "gsap/CustomEase";
@@ -43,7 +43,7 @@
 		y: 100,
 	});
 
-	// Timeline
+	// Timeline/home/user/website-new/src/components/widgets/Header.astro
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: "#about",
@@ -63,8 +63,7 @@
 	document.querySelectorAll<HTMLElement>(".scroll-to-about").forEach((e) => {
 		e.addEventListener("click", () => {
 			gsap.to(window, {
-				delay: 0.2,
-				duration: 2,
+				duration: 2.5,
 				scrollTo: tl.scrollTrigger!.end,
 				ease: CustomEase.create("custom", "M0,0 C0.321,0 0.506,0.027 0.744,0.056 1.004,0.087 0.818,1.001 1,1 "),
 			})
