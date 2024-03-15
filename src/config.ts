@@ -5,7 +5,7 @@ export const navPages = [
 		icon: "mdi:home",
 	},
 	{
-		url: "#about",
+		url: "#",
 		title: "About",
 		icon: "mdi:about",
 	},

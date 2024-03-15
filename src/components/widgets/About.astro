@@ -26,9 +26,12 @@
 
 <script>
 	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-	gsap.registerPlugin(ScrollTrigger);
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+	import { CustomEase } from "gsap/CustomEase";
+	
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
 	// Defaults
 	gsap.set(".about-heading", {
@@ -45,7 +48,7 @@
 		scrollTrigger: {
 			trigger: "#about",
 			start: "center center",
-			end: () => `+=${document.querySelector<HTMLElement>("#about")!.offsetWidth / 2}`,
+			end: () => `+=${document.querySelector<HTMLElement>("#about")!.offsetWidth}`,
 			scrub: true,
 			pin: true,
 			markers: true,
@@ -56,4 +59,15 @@
 		},
 	});
 	tl.to(".about-heading", {}).to(".about-content", {});
+
+	document.querySelectorAll<HTMLElement>(".scroll-to-about").forEach((e) => {
+		e.addEventListener("click", () => {
+			gsap.to(window, {
+				delay: 0.2,
+				duration: 2,
+				scrollTo: tl.scrollTrigger!.end,
+				ease: CustomEase.create("custom", "M0,0 C0.321,0 0.506,0.027 0.744,0.056 1.004,0.087 0.818,1.001 1,1 "),
+			})
+		});
+	});
 </script>
