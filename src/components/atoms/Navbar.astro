@@ -4,7 +4,7 @@ import { navPages } from "../../config.ts";
 ---
 
 <nav
-	class="fixed bottom-0 z-20 w-full border border-neutral-800 bg-neutral-900 px-2 py-1 text-text md:bottom-auto md:top-0 md:bg-transparent md:px-6 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60 lg:px-8 xl:mx-auto"
+	class="fixed bottom-0 z-20 w-full border-t border-neutral-800 bg-neutral-900 px-2 py-1 text-text md:bottom-auto md:top-0 md:border-b md:border-t-0 md:bg-transparent md:px-6 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60 lg:px-8 xl:mx-auto"
 >
 	<div class="m-0 flex overflow-hidden p-4 md:justify-between">
 		<a
@@ -16,7 +16,7 @@ import { navPages } from "../../config.ts";
 			{
 				navPages.map((page) => (
 					<a
-						class={`scroll-to-${page.title.toLowerCase()} cursor-pointer flex items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-neutral-800`}
+						class={`scroll-to-${page.title.toLowerCase()} flex cursor-pointer items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-neutral-800`}
 					>
 						<Icon
 							name={page.icon}
