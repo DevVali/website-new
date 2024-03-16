@@ -19,10 +19,7 @@ import { navPages } from "../../config.ts";
 					<a
 						class={`scroll-to-${page.title.toLowerCase()} flex cursor-pointer items-center rounded-md px-3 py-1 transition-all duration-300 hover:bg-neutral-800`}
 					>
-						<Icon
-							name={page.icon}
-							class="inline-block text-3xl md:mr-2 md:hidden md:text-2xl"
-						/>
+						<Icon name={page.icon} class="inline-block text-3xl md:hidden" />
 						<span class="hidden text-xl md:inline-block">{page.title}</span>
 					</a>
 				))
