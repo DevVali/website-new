@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import { navPages } from "../config.ts";
 ---
@@ -10,7 +11,7 @@ import { navPages } from "../config.ts";
 		<a
 			href="/"
 			class="hidden items-center justify-center text-center text-2xl font-bold md:flex"
-			><img src="./logo.png" width="32" class="mr-2" /> ejvali</a
+			><Image src="/logo-128.png" alt="Small logo" width={32} height={32} class="mr-2" /> ejvali</a
 		>
 		<div class="flex w-full justify-evenly md:w-auto md:justify-normal md:space-x-4">
 			{
