@@ -12,15 +12,6 @@ export default {
 			cursor: {
 				logo: "url(/logo-128.png), auto",
 			},
-			keyframes: {
-				fadein: {
-					"0%": { opacity: 0 },
-					"100%": { opacity: 100 },
-				},
-			},
-			animation: {
-				fadein: "fadein 1.5s forwards",
-			},
 		},
 	},
 	plugins: [],
