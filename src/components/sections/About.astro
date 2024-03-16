@@ -1,0 +1,69 @@
+---
+
+---
+
+<h2 class="about-heading text-3xl font-extrabold md:text-4xl">About Me</h2>
+
+<div class="about-content space-y-6">
+	<p class="text-xl md:text-2xl">
+		Hi, I'm <span class="text-primary">ejvali</span> 👋, a student by day and a programmer by night
+		living in Slovakia. I've been passionate about <span class="text-primary"
+			>web development</span
+		> from a young age, which has allowed me to develop my skills to their current stage. My focus
+		now is primarily on creating interactive and responsive websites for brands.
+	</p>
+
+	<p class="text-xl md:text-2xl">
+		As an <span class="text-primary">open-source</span> contributor, I've played a role in many well-known
+		(but also lesser-known) projects, which you can find on <a
+			href="https://github.com/DevVali"
+			class="text-primary">my GitHub profile</a
+		> or the <a href="#" class="text-primary">Projects</a> section on this website. I've also worked
+		as a content creator for <a href="https://www.gluo.xyz" class="text-primary">Gluo</a>.
+	</p>
+</div>
+
+<script>
+	import { gsap } from "gsap";
+
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+	// Defaults
+	gsap.set(".about-heading", {
+		opacity: 0,
+		y: -100,
+	});
+	gsap.set(".about-content", {
+		opacity: 0,
+		y: 100,
+	});
+
+	// Animation
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: "#about",
+			start: "center center",
+			end: "+=600",
+			scrub: true,
+			pin: true,
+		},
+		defaults: {
+			opacity: 1,
+			y: 0,
+		},
+	});
+	tl.to(".about-heading", {}).to(".about-content", {}, "<");
+
+	document.querySelectorAll<HTMLElement>(".scroll-to-about").forEach((e) => {
+		e.addEventListener("click", () => {
+			gsap.to(window, {
+				duration: 2,
+				scrollTo: tl.scrollTrigger!.end,
+				ease: "power1.in",
+			});
+		});
+	});
+</script>

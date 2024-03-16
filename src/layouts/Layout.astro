@@ -1,33 +1,16 @@
 ---
-import Header from "../components/Header.astro";
 
-const { title, indexLayout } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>ejvali - {title}</title>
+		<title>ejvali</title>
 	</head>
-	<body class="bg-background font-sans text-text">
-		<Header />
-
-		<main
-			class={`${
-				indexLayout
-					? "mt-16 flex flex-col items-center justify-center md:mt-56 md:flex-row"
-					: "max-w-7xl px-4 sm:mx-3 sm:px-10 lg:px-12 xl:mx-auto"
-			}`}
-		>
-			{!indexLayout && <h1 class="py-16 text-center text-5xl font-extrabold">{title}</h1>}
-			<slot />
-		</main>
-
-		<script>
-			import "../scripts/menu.ts";
-		</script>
+	<body class="overflow-x-hidden bg-background font-sans text-text">
+		<slot />
 	</body>
 </html>

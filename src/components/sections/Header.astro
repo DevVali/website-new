@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="mx-3 space-y-6 text-center">
+	<h1 class="text-5xl font-extrabold md:text-6xl"></h1>
+	<div class="header-content">
+		<h3 class="text-xl text-accent md:text-2xl">Full-Stack Web Developer</h3>
+	</div>
+</section>
+
+<a
+	class="header-arrow scroll-to-about absolute bottom-24 animate-bounce cursor-pointer md:bottom-16"
+	><Icon name="icomoon-free:circle-down" size={40} /></a
+>
+
+<script>
+	import { gsap } from "gsap";
+
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+	gsap.registerPlugin(ScrollToPlugin);
+
+	// Defaults
+	gsap.set(".header-content", {
+		opacity: 0,
+	});
+	gsap.set(".header-arrow", {
+		opacity: 0,
+	});
+
+	// Animation
+	const tl = gsap.timeline({
+		defaults: {
+			duration: 1.5,
+			opacity: 1,
+		},
+		paused: true,
+	});
+	tl.to(".header-content", {}).to(".header-arrow", {});
+
+	document.querySelectorAll<HTMLElement>(".scroll-to-home").forEach((e) => {
+		e.addEventListener("click", () => {
+			gsap.to(window, {
+				duration: 2,
+				scrollTo: 0,
+				ease: "power1.in",
+			});
+		});
+	});
+
+	import typewriter from "../../scripts/typewriter.ts";
+
+	typewriter("h1", {
+		text: "Hi, I'm <span class='cursor-logo text-primary'>ejvali</span>.",
+		speed: 50,
+		onFinish: () => {
+			tl.play();
+		},
+	});
+</script>

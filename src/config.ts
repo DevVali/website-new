@@ -1,30 +1,18 @@
-export const pages = [
+export const navPages = [
 	{
-		url: "",
 		title: "Home",
+		icon: "mdi:home",
 	},
 	{
-		url: "about",
 		title: "About",
-	},
-] satisfies {
-	url: string;
-	title: string;
-}[];
-
-export const socials = [
-	{
-		name: "GitHub",
-		link: "https://github.com/DevVali",
-		icon: "icon-park:github",
+		icon: "mdi:about",
 	},
 	{
-		name: "Discord",
-		link: "https://discordapp.com/users/773911690629742602",
-		icon: "logos:discord-icon",
+		title: "Projects",
+		icon: "grommet-icons:projects",
 	},
-] satisfies {
-	name: string;
-	link: string;
-	icon: string;
-}[];
+	{
+		title: "Contact",
+		icon: "mdi:contact",
+	},
+];

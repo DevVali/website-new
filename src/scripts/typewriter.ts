@@ -14,18 +14,20 @@ export default function typewriter(
 		}
 
 		if (!inTag) {
-			document.querySelector(element)!.innerHTML = properties.text.slice(0, index + 1);
 			index++;
+			document.querySelector(element)!.innerHTML = properties.text.slice(0, index);
 
 			if (index >= properties.text.length) {
 				clearInterval(intervalId);
-				if (properties.onFinish === undefined) return;
-				properties.onFinish();
+
+				if (properties.onFinish !== undefined) {
+					properties.onFinish();
+				}
 			}
 		} else {
 			index++;
 			interval();
 		}
 	};
-	let intervalId = setInterval(interval, properties.speed);
+	const intervalId = setInterval(interval, properties.speed);
 }
