@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/sections/Header.astro";
 import Navbar from "../components/widgets/Navbar.astro";
 import About from "../components/sections/About.astro";
+import Projects from "../components/sections/Projects.astro";
 ---
 
 <Layout>
@@ -11,8 +12,8 @@ import About from "../components/sections/About.astro";
 		<Header />
 	</header>
 
-	<main class="mb-24 md:mb-12">
-		<div class="bg-neutral-900" id="about">
+	<main>
+		<div class="mb-12 bg-neutral-900" id="about">
 			<div
 				class="aspect-[960/300] w-full bg-[url('/section-bg-top.svg')] bg-cover bg-center bg-no-repeat"
 			>
@@ -24,6 +25,12 @@ import About from "../components/sections/About.astro";
 				class="aspect-[960/300] w-full bg-[url('/section-bg-bottom.svg')] bg-cover bg-center bg-no-repeat"
 			>
 			</div>
+		</div>
+		
+		<div class="mb-12" id="projects">
+			<section class="max-w-7xl space-y-6 px-4 py-24 md:px-10 md:py-12 lg:px-12 xl:mx-auto">
+				<Projects />
+			</section>
 		</div>
 	</main>
 </Layout>
