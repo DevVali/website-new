@@ -7,6 +7,7 @@ export default {
 				text: "#ededed",
 				background: "#0e0e0e",
 				primary: "#91c587",
+				secondary: "#4c6347",
 				accent: "#aaaaaa",
 			},
 			cursor: {
