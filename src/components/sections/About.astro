@@ -44,11 +44,11 @@
 	// Animation
 	const tl = gsap.timeline({
 		scrollTrigger: {
-			trigger: "#about",
-			start: "center center",
-			end: "+=600",
+			trigger: ".about",
+			start: "top bottom",
+			end: "center center",
 			scrub: true,
-			pin: true,
+			markers: true,
 		},
 		defaults: {
 			opacity: 1,
