@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import projectImage from "../../assets/devgpt.svg";
+import projectImage from "../../assets/devgpt.png";
 ---
 
 <div
-	class="group relative flex-[1_0_calc(100%_-12px)] overflow-hidden rounded-2xl border border-secondary md:flex-[1_0_calc(50%_-12px)]"
+	class="group relative flex-[1_0_calc(100%_-12px)] overflow-hidden rounded-2xl border border-secondary transition-all duration-300 hover:scale-95 md:flex-[1_0_calc(50%_-12px)]"
 >
 	<Image
 		src={projectImage}
@@ -21,8 +21,9 @@ import projectImage from "../../assets/devgpt.svg";
 			</div>
 		</div>
 		<p>
-			Pipeline Tool Designed for Teams that Seamlessly Integrates with Leading Ticket Systems;
-			Over 31% of Pull Requests Merged First Time Across Diverse Projects.
+			DevGPT is an AI-powered dev agent that seamlessly integrates with popular project
+			management tools. I streamlined DevGPT's documentation, making it clear and easy to
+			follow, allowing developers getting started with DevGPT faster and with more ease.
 		</p>
 	</div>
 </div>
