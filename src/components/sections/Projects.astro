@@ -1,5 +1,6 @@
 ---
-import Project from "../shared/Project.astro";
+import Project from "../widgets/Project.astro";
+import { projects } from "../../config.ts";
 ---
 
 <h2 class="text-3xl font-extrabold md:text-4xl">Projects</h2>
@@ -7,9 +8,16 @@ import Project from "../shared/Project.astro";
 <p class="text-xl md:text-2xl">List of projects I've worked on and my work experiences.</p>
 
 <div class="projects flex gap-6">
-	<Project />
-	<Project />
-	<Project />
+	{
+		projects.map((project) => (
+			<Project
+				title={project.title}
+				description={project.description}
+				labels={project.labels}
+				image={project.image}
+			/>
+		))
+	}
 </div>
 
 <script>
