@@ -25,4 +25,18 @@ export const projects = [
 		labels: ["GitBook"],
 		image: "devgpt",
 	},
+	{
+		title: "Gluo",
+		description:
+			"I directed content creation and led the marketing team at Gluo, a privacy-focused social media platform. This resulted in an increased user engagement.",
+		labels: ["Figma", "Davinci Resolve"],
+		image: "glue",
+	},
+	{
+		title: "Xmas Time",
+		description:
+			"Xmas Time is a fun Visual Studio Code extension that adds a Christmas countdown to your status bar, spreading holiday cheer!",
+		labels: ["JavaScript", "Visual Studio Code", "NodeJS"],
+		image: "xmas",
+	},
 ];
