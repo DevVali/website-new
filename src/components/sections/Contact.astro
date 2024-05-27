@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<h2 class="text-3xl font-extrabold md:text-4xl">Contact me</h2>
+
+<p class="text-xl md:text-2xl">Let's work together. Contact me through one of the options below.</p>
+
+<div class="flex gap-6">
+	<a href="https://instagram.com/ejvali" class="animated-icon transition-all duration-300"
+		><Icon name="mdi:instagram" size={60} /></a
+	>
+	<a href="https://instagram.com/ejvali" class="animated-icon transition-all duration-300"
+		><Icon name="mdi:instagram" size={60} /></a
+	>
+	<a href="https://instagram.com/ejvali" class="animated-icon transition-all duration-300"
+		><Icon name="mdi:instagram" size={60} /></a
+	>
+	<a href="https://instagram.com/ejvali" class="animated-icon transition-all duration-300"
+		><Icon name="mdi:instagram" size={60} /></a
+	>
+	<a href="https://instagram.com/ejvali" class="animated-icon transition-all duration-300"
+		><Icon name="mdi:instagram" size={60} /></a
+	>
+</div>
+
+<script>
+	const icons = document.querySelectorAll<HTMLElement>(".animated-icon");
+
+	icons.forEach((icon, index) => {
+		icon.addEventListener("mouseover", () => {
+			icon.style.transform = "scale(1.5) translateY(-8px)";
+
+			if (icons[index + 1] !== undefined) {
+				icons[index + 1].style.transform = "scale(1.2) translateY(-6px)";
+			}
+			if (icons[index + 2] !== undefined) {
+				icons[index + 2].style.transform = "scale(1.1) translateY(-2px)";
+			}
+
+			if (icons[index - 1] !== undefined) {
+				icons[index - 1].style.transform = "scale(1.2) translateY(-6px)";
+			}
+			if (icons[index - 2] !== undefined) {
+				icons[index - 2].style.transform = "scale(1.1) translateY(-2px)";
+			}
+		});
+
+		icon.addEventListener("mouseleave", () => {
+			icons.forEach((icon) => {
+				icon.style.transform = "scale(1) translateY(0px)";
+			});
+		});
+	});
+</script>
