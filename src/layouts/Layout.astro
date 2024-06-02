@@ -1,5 +1,5 @@
 ---
-
+import { Tooltips } from "astro-tooltips";
 ---
 
 <html lang="en">
@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>ejvali</title>
+		<Tooltips interactive={true} delay={[10, 20]} placement="bottom" />
 	</head>
 	<body class="overscroll-none bg-background font-sans text-text">
 		<slot />
