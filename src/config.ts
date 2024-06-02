@@ -40,3 +40,26 @@ export const projects = [
 		image: "xmas",
 	},
 ];
+
+export const socials = [
+	{
+		name: "GitHub",
+		link: "https://github.com/DevVali",
+		icon: "icon-park-outline:github",
+	},
+	{
+		name: "Discord",
+		link: "https://discordapp.com/users/773911690629742602",
+		icon: "logos:discord-icon",
+	},
+	{
+		name: "Instagram",
+		link: "https://instagram.com/ejvali",
+		icon: "icon-park:instagram",
+	},
+	{
+		name: "E-mail",
+		link: "mailto:ejvali@ejvali.com",
+		icon: "icon-park:mail",
+	},
+];
