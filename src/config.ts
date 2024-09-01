@@ -57,9 +57,4 @@ export const socials = [
 		link: "https://instagram.com/ejvali",
 		icon: "icon-park:instagram",
 	},
-	{
-		name: "E-mail",
-		link: "mailto:ejvali@ejvali.com",
-		icon: "icon-park:mail",
-	},
 ];
